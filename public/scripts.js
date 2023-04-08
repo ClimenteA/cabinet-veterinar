@@ -28,14 +28,21 @@ document.addEventListener("DOMContentLoaded", () => {
     let sterilizareChirurgieModal = document.getElementById("sterilizare-chirurgie-modal");
     let overlayDark = document.getElementById("overlay-dark");
     let closeModalItems = document.getElementsByClassName("close-modal");
+    let serviciiVeterinareLink = document.querySelector("[href='#servicii-veterinare']");
 
     function closeModal() {
-        window.scrollTo(0, 0);
+        serviciiVeterinareLink.click();
         document.body.classList.remove("overflow-hidden");
         overlayDark.classList.add("none");
         consultatiiModal.classList.add("none");
         esteticaDeparazitareModal.classList.add("none");
         sterilizareChirurgieModal.classList.add("none");
+    }
+
+    function prepModal() {
+        window.scrollTo(0, 0);
+        document.body.classList.add("overflow-hidden");
+        overlayDark.classList.remove("none");
     }
 
     Array.from(closeModalItems).forEach(element => {
@@ -45,18 +52,18 @@ document.addEventListener("DOMContentLoaded", () => {
     overlayDark.addEventListener("click", closeModal);
 
     consultatii.addEventListener("click", () => {
-        window.scrollTo(0, 0);
-        document.body.classList.add("overflow-hidden");
-        overlayDark.classList.remove("none");
+        prepModal();
         consultatiiModal.classList.remove("none");
     });
 
     esteticaDeparazitare.addEventListener("click", () => {
-
+        prepModal();
+        esteticaDeparazitareModal.classList.remove("none");
     });
 
     sterilizareChirurgie.addEventListener("click", () => {
-
+        prepModal();
+        sterilizareChirurgieModal.classList.remove("none");
     });
 
 });

@@ -301,8 +301,7 @@ footer {
         flex-direction: column;
         gap: 1rem;
         max-width: 620px;
-        margin: 0 auto;
-
+        align-items: center;
     }
 
     .cookie-links {
@@ -485,5 +484,9 @@ tbody {
 
 .close-modal {
     cursor: pointer;
+    float: right;
+}
+
+.float-right {
     float: right;
 }
