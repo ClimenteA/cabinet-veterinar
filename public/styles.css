@@ -164,6 +164,10 @@ a {
     background-color: var(--red-light);
 }
 
+.bg-white {
+    background-color: var(--red-light);
+}
+
 .text-white {
     color: var(--absolute-white);
 }
@@ -194,6 +198,15 @@ a {
     margin-top: 8px;
     border-radius: 12px;
 }
+
+.line-3 {
+    background-color: var(--red-light);
+    height: 10px;
+    max-width: 8rem;
+    margin-top: 8px;
+    border-radius: 12px;
+}
+
 
 .flex-col {
     display: flex;
@@ -380,7 +393,7 @@ footer {
     padding-bottom: 8rem;
 }
 
-.menu {
+.cursor-pointer {
     cursor: pointer;
 }
 
@@ -398,26 +411,79 @@ footer {
 }
 
 .none {
-    display: none;
+    display: none !important;
 }
 
-
-.show-over-550 {
+.desktop {
     display: block;
 }
 
 @media only screen and (max-width: 550px) {
-    .show-over-550 {
+    .desktop {
         display: none;
     }
 }
 
-.show-lower-550 {
+.mobile {
     display: none;
 }
 
 @media only screen and (max-width: 550px) {
-    .show-lower-550 {
+    .mobile {
         display: block;
     }
+}
+
+
+#overlay-dark {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--dark);
+    opacity: .7;
+    z-index: 2;
+}
+
+.modal-item {
+    display: block;
+    background-color: var(--white);
+    position: absolute;
+    top: 2rem;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 3;
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 600px;
+    width: 80%;
+}
+
+th {
+    text-align: left;
+    font-weight: bolder;
+    text-decoration: underline;
+}
+
+td {
+    padding-right: 4rem;
+}
+
+thead {
+    line-height: 2.5rem;
+}
+
+tbody {
+    line-height: 1.5rem;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.close-modal {
+    cursor: pointer;
+    float: right;
 }

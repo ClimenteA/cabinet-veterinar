@@ -16,29 +16,30 @@
 
 <body>
 
+    <div id="overlay-dark" class="none"></div>
+
     <main class="container">
         <header class="container-900">
             <nav class="border">
                 <div>
-                    <a class="bolder" href="/#home">Cabinet Veterinar</a>
+                    <a class="bolder" href="/">Cabinet Veterinar</a>
                 </div>
 
-
-                <div class="show-over-550">
-                    <a class="mr-1" href="/#servicii-veterinare">Servicii veterinare</a>
-                    <a href="/#despre-noi">Despre noi</a>
+                <div class="desktop">
+                    <a class="mr-1" href="#servicii-veterinare">Servicii veterinare</a>
+                    <a href="#despre-noi">Despre noi</a>
                 </div>
 
-                <div class="show-lower-550">
+                <div class="mobile">
 
-                    <a class="menu" id="open-menu">
+                    <a class="cursor-pointer" id="open-menu">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="currentColor" class="w-6 h-6">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 9h16.5m-16.5 6.75h16.5" />
                         </svg>
                     </a>
 
-                    <a class="menu none" id="close-menu">
+                    <a class="cursor-pointer none" id="close-menu">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="currentColor" class="w-6 h-6">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
@@ -47,10 +48,10 @@
 
                     <ul class="menu-items border none" id="menu-links">
                         <li>
-                            <a class="mr-1" href="/#servicii-veterinare">Servicii veterinare</a>
+                            <a class="mr-1" href="#servicii-veterinare">Servicii veterinare</a>
                         </li>
                         <li>
-                            <a href="/#despre-noi">Despre noi</a>
+                            <a href="#despre-noi">Despre noi</a>
                         </li>
                     </ul>
 
@@ -67,9 +68,11 @@
                         Animalutul tau va fi in siguranta cu noi!
                     </h1>
 
-                    <button class="mt-1 bg-red text-white">
-                        Fa o programare online
-                    </button>
+                    <a href="https://calendly.com/" target="_blank">
+                        <button class="mt-1 bg-red text-white">
+                            Fa o programare online
+                        </button>
+                    </a>
 
                 </div>
 
@@ -80,7 +83,7 @@
         </section>
 
 
-        <section class="min-870-mt-5">
+        <section id="servicii-veterinare" class="min-870-mt-5">
 
             <header class="flex-col title-red-underline">
                 <h1 class="bolder">
@@ -103,7 +106,7 @@
                         </p>
                     </header>
 
-                    <button class="mt-1">Vezi detalii</button>
+                    <button id="consultatii" class="mt-1">Vezi detalii</button>
 
                 </article>
 
@@ -122,7 +125,7 @@
                         </p>
                     </header>
 
-                    <button class="mt-1">Vezi detalii</button>
+                    <button id="estetica-deparazitare" class="mt-1">Vezi detalii</button>
 
                 </article>
 
@@ -139,15 +142,72 @@
                         </p>
                     </header>
 
-                    <button class="mt-1">Vezi detalii</button>
+                    <button id="sterilizare-chirurgie" class="mt-1">Vezi detalii</button>
+
                 </article>
             </div>
 
+        </section>
+
+        <section>
+
+            <div id="consultatii-modal" class="modal-item none">
+
+                <a class="close-modal">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </a>
+
+                <h2 class="bolder">
+                    Consultatii
+                    <div class="line-3"></div>
+                </h2>
+
+                <table class="mt-2">
+                    <thead>
+                        <tr>
+                            <th>Serviciu</th>
+                            <th>Pret</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Consultare generala</td>
+                            <td>30 RON</td>
+                        </tr>
+                        <tr>
+                            <td>Ecografie</td>
+                            <td>100 RON</td>
+                        </tr>
+                        <tr>
+                            <td>Analize sange</td>
+                            <td>256 RON</td>
+                        </tr>
+                        <tr>
+                            <td>Analize la microsop</td>
+                            <td>40 RON</td>
+                        </tr>
+                        <tr>
+                            <td>Analize la urina/fecale</td>
+                            <td>60 RON</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <a href="https://calendly.com/" target="_blank">
+                    <button class="mt-5 bg-red text-white float-right">
+                        Fa o programare online
+                    </button>
+                </a>
+
+            </div>
 
         </section>
 
 
-        <section class="mt-5 p-8">
+        <section id="despre-noi" class="mt-5 p-8">
 
             <header class="flex-col title-red-underline">
                 <h1 class="bolder">
@@ -220,8 +280,16 @@
                 <h1 class="mb-2">Cabinet veterinar</h1>
 
                 <div class="contact-buttons">
-                    <button class="reset-box-shadow">Fa o programare online</button>
-                    <button class="reset-box-shadow bg-red text-white">Suna pentru o programare</button>
+                    <a href="https://calendly.com/" target="_blank">
+                        <button class="reset-box-shadow">
+                            Fa o programare online
+                        </button>
+                    </a>
+                    <a href="https://wa.me/0755656565" target="_blank">
+                        <button class="reset-box-shadow bg-red text-white">
+                            Suna pentru o programare
+                        </button>
+                    </a>
                 </div>
 
                 <ul class="cookie-links">
